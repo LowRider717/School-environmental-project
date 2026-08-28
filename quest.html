@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Environmental quest about Nizhne-Ivkino">
+  <title>Environmental quest | Nizhne-Ivkino</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="quest-page">
+  <nav class="site-nav dark" aria-label="Main navigation">
+    <a class="brand" href="index.html">Nizhne-Ivkino</a>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="research.html">Research</a><a href="design.html">Design</a><a href="tourism.html">Ecotourism</a><a href="map.html">Map</a><a href="glossary.html">Glossary</a><a class="quest" href="quest.html" aria-current="page">Quest</a>
+    </div>
+  </nav>
+
+  <header class="page-header quest-hero">
+    <p class="eyebrow" style="color:var(--deep)">Environmental inspection</p>
+    <h1>Save the archive<br>of Nizhne-Ivkino</h1>
+    <p>Complete 7 challenges, prove the value of the ecosystem and collect the secret code.</p>
+    <div class="quest-description">
+      <p>This interactive quest will test your knowledge of local flora and fauna, environmental threats, and conservation rules. You'll identify rare species, solve puzzles, and help protect the unique ecosystem of the Ivkina River valley.</p>
+      <p>Challenges include:</p>
+      <ul>
+        <li>Restore the ecologists' report</li>
+        <li>Identify environmental threats</li>
+        <li>Choose safe routes through protected areas</li>
+        <li>Match species with their descriptions</li>
+        <li>Solve a photo puzzle</li>
+        <li>Complete an eco crossword</li>
+        <li>Sort waste correctly</li>
+      </ul>
+    </div>
+    <details class="quest-disclaimer">
+      <summary>Important note about accuracy</summary>
+      <p>This quest is an educational project and may contain fictional scenarios or simplified information for learning purposes. Some details may not fully correspond to the current real-world situation in Nizhne-Ivkino.</p>
+    </details>
+    <div class="quest-start" id="start-panel">
+      <button class="button filled" id="start-quest" type="button">Start expedition <span aria-hidden="true">↗</span></button>
+    </div>
+  </header>
+
+  <main class="quest-main" id="quest-main" hidden>
+    <div class="quest-bar">
+      <strong id="team-label">Expedition</strong>
+      <span id="code-progress">Code: _ _ _ _ _ _ _</span>
+    </div>
+
+    <div class="quest-tabs" role="tablist" aria-label="Challenges">
+      <button class="quest-tab active" type="button" role="tab" aria-selected="true" data-task="1">1</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="2">2</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="3">3</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="4">4</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="5">5</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="6">6</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="7">7</button>
+      <button class="quest-tab" type="button" role="tab" aria-selected="false" data-task="code">Code</button>
+    </div>
+
+    <section class="quest-task active" id="task-1" role="tabpanel">
+      <span class="quest-kicker">Challenge 1 · Eco Decoder</span>
+      <h2>Restore the ecologists' report</h2>
+      <p>Choose the correct terms from the glossary.</p>
+      <details class="quest-glossary">
+        <summary>Open the glossary for this challenge</summary>
+        <div class="quest-glossary-grid">
+          <article><h3>Industrial plant</h3><p>A factory where goods are produced.</p><small>Example: An industrial plant can affect the air and water.</small></article>
+          <article><h3>Natural monument</h3><p>A protected natural feature or area with special value.</p><small>Example: The river valley is a natural monument.</small></article>
+          <article><h3>Residential district</h3><p>An area of a town where people live.</p><small>Example: The residential district is far from the forest.</small></article>
+          <article><h3>Unorganized</h3><p>Not planned or managed by an official group.</p><small>Example: Unorganized tourists may harm the environment.</small></article>
+          <article><h3>Foreign</h3><p>Coming from another country.</p><small>Example: Foreign visitors should follow local nature rules.</small></article>
+          <article><h3>Sporting</h3><p>Connected with sports or physical activity.</p><small>Example: Sporting events should not disturb rare animals.</small></article>
+          <article><h3>Flora</h3><p>All the plants in a particular area.</p><small>Example: The wetland flora includes rare orchids.</small></article>
+          <article><h3>Fauna</h3><p>All the animals in a particular area.</p><small>Example: The local fauna includes beavers and eagles.</small></article>
+          <article><h3>Population</h3><p>All the animals or people living in an area.</p><small>Example: Pollution can reduce the beaver population.</small></article>
+        </div>
+      </details>
+      <div class="mission-paper">The Ivkina River valley contains a unique
+        <select data-answer="nature"><option value="">choose a term</option><option value="factory">industrial plant</option><option value="nature">natural monument</option><option value="district">residential district</option></select>.
+        However, because of a growing number of
+        <select data-answer="unorganized"><option value="">choose a term</option><option value="unorganized">unorganized</option><option value="foreign">foreign</option><option value="sport">sporting</option></select>
+        tourists, the local rare
+        <select data-answer="fauna"><option value="">choose a term</option><option value="flora">flora</option><option value="fauna">fauna</option><option value="population">population</option></select>, including the white-tailed eagle and the European beaver, is losing its natural habitats.</div>
+      <button class="button filled check-task" type="button" data-check="1">Check</button>
+      <p class="task-result" id="result-1" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task" id="task-2" role="tabpanel" hidden>
+      <span class="quest-kicker">Challenge 2 · Eco Report</span>
+      <h2>What threat is described in the report?</h2>
+      <p>Read the inspector's report and examine the clues. The photos are temporary placeholders.</p>
+      <div class="mission-paper report"><strong>Confidential. For official use only.</strong><br>Near the Ivkina River floodplain, inspectors found a broken fence, boot prints and spent shells. A European beaver was found dead with a gunshot wound. It appears that an organized group is illegally hunting rare animals.</div>
+      <label class="quest-label" for="threat-answer">What is the main threat?</label><input class="quest-input" id="threat-answer" type="text" placeholder="Type one word">
+      <button class="button filled check-task" type="button" data-check="2">Submit</button><p class="task-result" id="result-2" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task" id="task-3" role="tabpanel" hidden>
+      <span class="quest-kicker">Challenge 3 · Trail Inspector</span><h2>Choose the safe route</h2><p>Test your knowledge of the rules for protecting rare species.</p>
+      <fieldset><legend>1. You notice a white-tailed eagle nest in a tall tree. What should you do?</legend><label><input type="radio" name="q3a" value="a"> Get closer to take a photo</label><label><input type="radio" name="q3a" value="b"> Keep away, stay quiet and leave calmly</label><label><input type="radio" name="q3a" value="c"> Throw a stick into the nest</label></fieldset>
+      <fieldset><legend>2. Where are campfires allowed?</legend><label><input type="radio" name="q3b" value="a"> Anywhere, if there is water nearby</label><label><input type="radio" name="q3b" value="b"> Only at specially equipped sites</label><label><input type="radio" name="q3b" value="c"> Under any large tree</label></fieldset>
+      <button class="button filled check-task" type="button" data-check="3">Check answers</button><p class="task-result" id="result-3" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task" id="task-4" role="tabpanel" hidden>
+      <span class="quest-kicker">Challenge 4 · Media Content</span><h2>Match species with descriptions</h2><p>The photos are temporary placeholders. Choose the correct description for each species.</p>
+      <div class="matching-grid"><div class="match-row"><div class="quest-image"><img src="Pics/lady-slipper.png" alt="Lady's slipper orchid" width="300" height="200"></div><select data-answer="b"><option value="">Description</option><option value="a">A · A large rodent living near rivers</option><option value="b">B · A rare orchid of damp mixed forests</option><option value="c">C · A bird of prey nesting near water</option></select></div><div class="match-row"><div class="quest-image"><img src="Pics/white-tailed-eagle.png" alt="White-tailed eagle" width="300" height="200"></div><select data-answer="c"><option value="">Description</option><option value="a">A · A large rodent living near rivers</option><option value="b">B · A rare orchid of damp mixed forests</option><option value="c">C · A bird of prey nesting near water</option></select></div><div class="match-row"><div class="quest-image"><img src="Pics/european-beaver.png" alt="European beaver" width="300" height="200"></div><select data-answer="a"><option value="">Description</option><option value="a">A · A large rodent living near rivers</option><option value="b">B · A rare orchid of damp mixed forests</option><option value="c">C · A bird of prey nesting near water</option></select></div></div>
+      <button class="button filled check-task" type="button" data-check="4">Check</button><p class="task-result" id="result-4" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task" id="task-5" role="tabpanel" hidden>
+      <span class="quest-kicker">Challenge 5 · Eco Puzzle</span><h2>Build the rare species photo</h2><p>Arrange the nine fragments to restore the full photo of a white-tailed eagle.</p>
+      <div class="puzzle-pieces" id="puzzle-pieces"></div>
+      <button class="button filled check-task" type="button" data-check="5">Check</button><p class="task-result" id="result-5" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task" id="task-6" role="tabpanel" hidden>
+      <span class="quest-kicker">Challenge 6 · Eco Crossword</span><h2>Find the key word</h2><p>The first letters of the answers make an important word for protecting nature.</p>
+      <div class="mission-paper crossword-clues clues-en" lang="en"><p>1. A bird-built shelter high in a tree</p><p>2. A wild creature, such as a beaver or an eagle</p><p>3. A marked path through the forest</p><p>4. Rare and one of a kind</p><p>5. The waterway beside Nizhne-Ivkino</p><p>6. A large raptor with a white tail</p></div>
+      <label class="quest-label" for="crossword-answer">Key word</label><input class="quest-input" id="crossword-answer" type="text" placeholder="Enter the word"><button class="button filled check-task" type="button" data-check="6">Check</button><p class="task-result" id="result-6" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task" id="task-7" role="tabpanel" hidden>
+      <span class="quest-kicker">Challenge 7 · Eco Sorting</span><h2>Sort the waste</h2><p>Drag each item into the right bin, or select an item and then tap a bin.</p>
+      <div class="sorting-items" id="sorting-items"><button draggable="true" data-waste="organic">Apple core</button><button draggable="true" data-waste="recycle">Plastic bottle</button><button draggable="true" data-waste="danger">Battery</button><button draggable="true" data-waste="recycle">Glass jar</button><button draggable="true" data-waste="recycle">Paper bag</button><button draggable="true" data-waste="recycle">Tin can</button></div>
+      <div class="bins"><div class="waste-bin" data-bin="organic"><span>Organic waste</span></div><div class="waste-bin" data-bin="recycle"><span>Recycling</span></div><div class="waste-bin" data-bin="danger"><span>Hazardous waste</span></div></div>
+      <button class="button filled check-task" type="button" data-check="7">Check</button><p class="task-result" id="result-7" aria-live="polite"></p>
+    </section>
+
+    <section class="quest-task vault" id="task-code" hidden><span class="quest-kicker">Code entry</span><h2>Enter the seven-digit code</h2><p>Use the digits collected from all seven challenges.</p><input class="quest-input vault-input" id="vault-code" inputmode="numeric" maxlength="7" placeholder="Enter code"><button class="button filled" id="open-vault" type="button">Open vault</button><p class="task-result" id="vault-result" aria-live="polite"></p><span class="vault-bird" id="vault-bird" aria-hidden="true">🕊️</span></section>
+  </main>
+  <footer>Environmental quest · Nizhne-Ivkino</footer>
+  <script src="script.js"></script>
+  <script src="quest.js"></script>
+</body>
+</html>
