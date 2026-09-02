@@ -32,10 +32,7 @@ document.querySelectorAll('img').forEach((image) => {
   if (image.alt.includes('Water, bridge and green shore')) {
     image.src = 'Pics/hydro-unit.jpg';
   }
-  if (image.src.includes('hydro-unit.jpg')) {
-    image.src = 'Pics/РіРёРґСЂРѕСѓР·РµР».png';
-    image.classList.add('hydro-news');
-  }
+  if (image.src.includes('hydro-unit.jpg')) image.classList.add('hydro-news');
 });
 
 const designGallery = document.querySelector('.gallery');
