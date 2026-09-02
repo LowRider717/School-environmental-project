@@ -30,7 +30,7 @@ document.querySelectorAll('.nav-links').forEach((navigation) => {
     mapLink.textContent = 'Map';
     navigation.insertBefore(mapLink, navigation.querySelector('.quest'));
   }
-  ['index.html', 'research.html', 'design.html', 'tourism.html', 'map.html', 'glossary.html', 'quest.html'].forEach((href) => {
+  ['index.html', 'research.html', 'tourism.html', 'map.html', 'glossary.html', 'quest.html'].forEach((href) => {
     const link = navigation.querySelector(`a[href="${href}"]`);
     if (link) navigation.append(link);
   });
@@ -116,9 +116,6 @@ const translations = {
   'Who lives': 'Кто живёт', 'in this forest?': 'в этом лесу?',
   'Rare plants': 'Редкие растения', 'Rare animals': 'Редкие животные', 'Four threats': 'Четыре угрозы',
   Flora: 'Флора', Fauna: 'Фауна', Ecology: 'Экология',
-  'Visual direction': 'Визуальная часть',
-  'See the place': 'Показать', 'through images': 'место взглядом', 'Project archive': 'Архив проекта',
-  'Nature photography and local materials come together in one calm gallery.': 'Изображения природы и локальные материалы собраны в одной спокойной галерее.',
   'Route map': 'Карта маршрута', 'Project materials': 'Материалы проекта',
   'Guidebook': 'Путеводитель', 'Walk gently': 'Идти бережно',
   'Route 01': 'Маршрут 01', 'Route 02': 'Маршрут 02',
@@ -127,7 +124,7 @@ const translations = {
   'English · Ecology': 'English · Русский', 'Words': 'Слова', 'that protect': 'которые защищают',
   'Search the glossary': 'Поиск по словарю', 'For example, habitat': 'Например, habitat',
   'No terms match your search.': 'По этому запросу терминов не найдено.',
-  'Home': 'Главная', Research: 'Исследования', Design: 'Дизайн', Ecotourism: 'Экотуризм', Glossary: 'Словарь',
+  'Home': 'Главная', Research: 'Исследования', Ecotourism: 'Экотуризм', Map: 'Карта', Glossary: 'Словарь',
   Map: 'Карта',
   'Quest (soon)': 'Квест (скоро)',
   'River between green banks': 'Река среди зелёных берегов', 'Forest path in sunlight': 'Лесная дорожка и солнечный свет',
@@ -139,14 +136,17 @@ const translations = {
   'Light in a coniferous forest': 'Свет в хвойном лесу', 'Bird perched on a branch in nature': 'Птица на ветке в природе',
   'Forest path leading to water': 'Тропинка через лес к воде',
   'Trail beside a river and waterfall': 'Тропа вдоль реки и водопад', 'Deer in a forest clearing': 'Олень в лесу на солнечной поляне',
-  'A nature project about Nizhne-Ivkino · sources: INFO.txt and INFO2.txt': 'Проект о природе Нижнеивкино · материалы: INFO.txt и INFO2.txt',
-  'Research page · Nizhne-Ivkino': 'Исследовательская страница · Нижне-Ивкино',
-  'Visual project archive': 'Визуальная часть проекта',
-  'Guidebook · coordinates: 58.198331, 49.515583': 'Путеводитель · координаты: 58.198331, 49.515583',
-  'Environmental glossary · based on INFO.txt': 'Экологический словарь · составлен по материалам INFO.txt',
+  'Sources': 'Источники',
+  'Nizhne-Ivkino': 'Нижне-Ивкино',
+  'Research': 'Исследования',
+  'Design': 'Дизайн',
+  'Ecotourism': 'Экотуризм',
+  'Map': 'Карта',
+  'Glossary': 'Словарь',
+  'Quest': 'Квест',
   'Nizhne-Ivkino is located in the Kumyon District of the Kirov Region. The Ivkina River, springs and mixed forests create a place for observation and careful recreation.': 'Нижнеивкино находится в Кумёнском районе Кировской области. Река Ивкина, источники и смешанные леса образуют пространство для наблюдения и бережного отдыха.',
   "Lady's slipper, Calypso orchid and bird's-nest orchid are associated with damp, shady forests.": 'Венерин башмачок, калипсо луковичная и гнездовка настоящая связаны с влажными, тенистыми лесами.',
-  'White-tailed eagle, lesser spotted eagle, barn owl, beaver, garden dormouse and Apollo need protected habitats.': 'Орлан-белохвост, осоед, сипуха, бобр, садовая соня и аполлон требуют сохранения своих местообитаний.',
+  'White-tailed eagle, lesser spotted eagle, Ural owl, beaver, garden dormouse and Apollo need protected habitats.': 'Орлан-белохвост, осоед, неясыть, бобр, садовая соня и аполлон требуют сохранения своих местообитаний.',
   'Habitat loss, pollution, illegal hunting and excessive tourism pressure disturb the natural balance.': 'Потеря местообитаний, загрязнение, незаконная охота и слишком сильная туристическая нагрузка нарушают баланс.',
   'Postcard · forest light': 'Открытка · лесной свет', 'Poster · territory begins at the horizon': 'Постер · территория начинается с горизонта',
   'QR block for a future interactive map link.': 'QR-блок для будущей ссылки на интерактивную карту.',
@@ -190,14 +190,7 @@ function translatePage(language) {
   localStorage.setItem('site-language', language);
 }
 
-const footer = document.querySelector('footer');
-if (footer) {
-  const sourcesLink = document.createElement('a');
-  sourcesLink.className = 'footer-sources';
-  sourcesLink.href = 'sources.html';
-  sourcesLink.textContent = 'Sources';
-  footer.prepend(sourcesLink);
-}
+
 
 const glossaryTerms = [
   { term: 'Industrial plant', transcription: '[ɪnˈdʌstriəl plɑːnt]', definition: 'A factory or other large building where goods are produced.' },
