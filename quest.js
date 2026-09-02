@@ -78,7 +78,7 @@ document.querySelector('.check-task[data-check="4"]').addEventListener('click', 
 });
 
 const puzzlePieces = document.querySelector('#puzzle-pieces');
-let puzzleState = [2, 5, 8, 1, 7, 3, 9, 4, 6];
+let puzzleState = [2, 6, 11, 1, 15, 8, 4, 13, 10, 3, 16, 7, 12, 5, 9, 14];
 let selectedIndex = null;
 function renderPuzzle() {
   puzzlePieces.innerHTML = '';

@@ -208,17 +208,24 @@ footer span { color: #b7c6ba; }
 .puzzle-board { width: min(100%, 480px); display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 24px 0 14px; padding: 6px; background: var(--deep); }
 .puzzle-slot, .puzzle-piece { min-height: 82px; border: 1px dashed #9ab29d; background: #f4f8f3; color: var(--deep); font: inherit; cursor: pointer; }
 .puzzle-slot { background: #dfeadf; }
-.puzzle-piece { min-width: 100px; aspect-ratio: 3 / 4; padding: 0; border-style: solid; border-radius: 6px; background-image: url('Pics/Белый орлан.png'); background-repeat: no-repeat; background-size: 300% 300%; }
+.puzzle-piece { min-width: 0; aspect-ratio: 766 / 1024; padding: 0; border-style: solid; border-radius: 6px; background-image: url('Pics/Белый орлан.png'); background-repeat: no-repeat; background-size: 400% 400%; }
 .puzzle-piece[data-piece="1"] { background-position: 0 0; }
-.puzzle-piece[data-piece="2"] { background-position: 50% 0; }
-.puzzle-piece[data-piece="3"] { background-position: 100% 0; }
-.puzzle-piece[data-piece="4"] { background-position: 0 50%; }
-.puzzle-piece[data-piece="5"] { background-position: 50% 50%; }
-.puzzle-piece[data-piece="6"] { background-position: 100% 50%; }
-.puzzle-piece[data-piece="7"] { background-position: 0 100%; }
-.puzzle-piece[data-piece="8"] { background-position: 50% 100%; }
-.puzzle-piece[data-piece="9"] { background-position: 100% 100%; }
-.puzzle-pieces { width: min(100%, 480px); display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.puzzle-piece[data-piece="2"] { background-position: 33.333% 0; }
+.puzzle-piece[data-piece="3"] { background-position: 66.667% 0; }
+.puzzle-piece[data-piece="4"] { background-position: 100% 0; }
+.puzzle-piece[data-piece="5"] { background-position: 0 33.333%; }
+.puzzle-piece[data-piece="6"] { background-position: 33.333% 33.333%; }
+.puzzle-piece[data-piece="7"] { background-position: 66.667% 33.333%; }
+.puzzle-piece[data-piece="8"] { background-position: 100% 33.333%; }
+.puzzle-piece[data-piece="9"] { background-position: 0 66.667%; }
+.puzzle-piece[data-piece="10"] { background-position: 33.333% 66.667%; }
+.puzzle-piece[data-piece="11"] { background-position: 66.667% 66.667%; }
+.puzzle-piece[data-piece="12"] { background-position: 100% 66.667%; }
+.puzzle-piece[data-piece="13"] { background-position: 0 100%; }
+.puzzle-piece[data-piece="14"] { background-position: 33.333% 100%; }
+.puzzle-piece[data-piece="15"] { background-position: 66.667% 100%; }
+.puzzle-piece[data-piece="16"] { background-position: 100% 100%; }
+.puzzle-pieces { width: min(100%, 480px); display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .puzzle-piece.placed { opacity: .45; }
 .puzzle-piece.selected { outline: 3px solid var(--accent); }
 .sorting-items { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
